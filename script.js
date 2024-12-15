@@ -1,4 +1,4 @@
-// const birthday = new Date(new Date().getFullYear(), 11, 23);
+// const birthday = new Date(new Date().getFullYear(), 11, 25);
 const birthday = new Date(new Date().getTime() + 60 * 1000);
 
 // Kalau tanggal sekarang lewat ulang tahun, set untuk tahun depan
