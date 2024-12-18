@@ -81,16 +81,13 @@
 </head>
 
 <body>
-  <!-- Audio Player -->
   <audio id="background-audio" muted loop>
     <source src="birthday1.mp3" type="audio/mpeg">
     Your browser does not support the audio element.
   </audio>
 
-  <!-- Main Content -->
   <div class="container" id="content"></div>
 
-  <!-- Flower Section -->
   <div class="flower-section" id="flower-section">
     <iframe id="content-frame" src="kadonya/flower.html"></iframe>
   </div>
@@ -100,13 +97,11 @@
     const content = document.getElementById('content');
     const flowerSection = document.getElementById('flower-section');
 
-    // Function to play audio
     function playAudio() {
       audio.muted = false;
       audio.play();
     }
 
-    // Typing effect
     function typeEffect(element, text, speed, callback) {
       let index = 0;
       function type() {
@@ -121,7 +116,6 @@
       type();
     }
 
-    // SPA Navigation
     function navigate(page) {
       if (page === 'home') {
         content.innerHTML = `
@@ -142,13 +136,12 @@
           `;
         });
       } else if (page === 'flower') {
-        content.innerHTML = ''; // Clear content for the flower section
-        flowerSection.style.display = 'flex'; // Show the flower section
+        content.innerHTML = '';
+        flowerSection.style.display = 'flex';
         flowerSection.scrollIntoView({ behavior: 'smooth' });
       }
     }
 
-    // Load the first page
     navigate('home');
   </script>
 </body>
