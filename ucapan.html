@@ -1,65 +1,156 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Happy Birthday!</title>
-  <link rel="stylesheet" href="ucapan.css">
+  <title>Happy Birthday Gita Ropelia Putri</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(135deg, #6e8efb, #a777e3);
+      color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    .container {
+      text-align: center;
+      padding: 20px;
+      max-width: 800px;
+    }
+
+    .flower-section {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(135deg, #fff, #f8f8f8);
+      color: black;
+      z-index: 100;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+
+    iframe {
+      border: none;
+      width: 100%;
+      height: 100%;
+    }
+
+    .button {
+      display: inline-block;
+      margin: 10px;
+      padding: 10px 20px;
+      background: #ff7675;
+      color: white;
+      text-decoration: none;
+      font-size: 1rem;
+      border-radius: 5px;
+      transition: background 0.3s ease;
+      cursor: pointer;
+    }
+
+    .button:hover {
+      background: #d63031;
+    }
+
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 1.2rem;
+    }
+
+    .typing {
+      display: inline;
+      white-space: pre-wrap;
+      word-wrap: break-word;
+    }
+  </style>
 </head>
 
-<style>
-    body {
-        font-family: Arial, sans-serif;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-        margin: 0;
-        background: linear-gradient(135deg, #ff9a9e, #fad0c4);
-        color: white;
-        text-align: center;
-      }
-      
-      .celebration-container {
-        background: rgba(0, 0, 0, 0.5);
-        padding: 30px 50px;
-        border-radius: 15px;
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-      }
-      
-      h1 {
-        font-size: 3rem;
-        margin-bottom: 20px;
-      }
-      
-      p {
-        font-size: 1.2rem;
-        margin: 10px 0;
-      }
-      
-      .button {
-        display: inline-block;
-        margin-top: 20px;
-        padding: 10px 20px;
-        background: #ff7675;
-        color: white;
-        text-decoration: none;
-        font-size: 1rem;
-        border-radius: 5px;
-        transition: background 0.3s ease;
-      }
-      
-      .button:hover {
-        background: #d63031;
-      }      
-</style>
-
 <body>
-  <div class="celebration-container">
-    <h1>GITA Cantik</h1>
-    <!-- <p>Wishing you all the best on your special day! 🥳</p>
-    <p>Semoga tahun ini penuh kebahagiaan, kesuksesan, dan momen-momen indah. 🎂</p>
-    <a href="index.html" class="button">Kembali ke Countdown</a> -->
+  <!-- Audio Player -->
+  <audio id="background-audio" muted loop>
+    <source src="birthday1.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+
+  <!-- Main Content -->
+  <div class="container" id="content"></div>
+
+  <!-- Flower Section -->
+  <div class="flower-section" id="flower-section">
+    <iframe id="content-frame" src="kadonya/flower.html"></iframe>
   </div>
+
+  <script>
+    const audio = document.getElementById('background-audio');
+    const content = document.getElementById('content');
+    const flowerSection = document.getElementById('flower-section');
+
+    // Function to play audio
+    function playAudio() {
+      audio.muted = false;
+      audio.play();
+    }
+
+    // Typing effect
+    function typeEffect(element, text, speed, callback) {
+      let index = 0;
+      function type() {
+        if (index < text.length) {
+          element.innerHTML += text.charAt(index);
+          index++;
+          setTimeout(type, speed);
+        } else if (callback) {
+          callback();
+        }
+      }
+      type();
+    }
+
+    // SPA Navigation
+    function navigate(page) {
+      if (page === 'home') {
+        content.innerHTML = `
+          <h1>Halo Gita Ropelia Putri</h1>
+          <p>Klik tombol di bawah ini yaa..</p>
+          <button class="button" onclick="playAudio(); navigate('ucapan');">Buka Ucapan 🎉</button>
+        `;
+        flowerSection.style.display = 'none';
+      } else if (page === 'ucapan') {
+        content.innerHTML = `<h1>🎉 Happy Birthday! Gita 🎉</h1><div id="typing-container" class="typing"></div>`;
+        const typingContainer = document.getElementById('typing-container');
+        const message = `Lu itu salah satu orang yang bikin hidup jadi berwarna.\nKadang lu sedikit cuek, tapi justru itu bikin lu punya vibe \nyang beda. Kalau ngobrol langsung, lu selalu bikin suasana\njadi asik banget. Gue juga suka cara lu menikmati hal-hal\nrandom. Walaupun lu anak pertama, tapi lu nggak kayak anak\npertama pada umumnya, lu punya cara sendiri yang santai\ntapi tetap kelihatan kuat dan tegar. Di ulang tahun ini,\ngue harap semua harapan lu terkabul. Semoga lu selalu\nbahagia, tetap jadi diri lu yang seru dan unik, dan\njangan lupa kasih waktu buat diri lu menikmati hal-hal\nkecil yang bikin lu senyum. Gue bersyukur banget\nbisa kenal sama lu. Semoga hari ini spesial banget,\nkayak lu wkwkwk`;
+
+        typeEffect(typingContainer, message, 100, () => {
+          content.innerHTML += `
+            <br>
+            <button class="button" onclick="navigate('flower')">Ini ada kado cantik buat lu</button>
+          `;
+        });
+      } else if (page === 'flower') {
+        content.innerHTML = ''; // Clear content for the flower section
+        flowerSection.style.display = 'flex'; // Show the flower section
+        flowerSection.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+
+    // Load the first page
+    navigate('home');
+  </script>
 </body>
+
 </html>

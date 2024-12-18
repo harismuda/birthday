@@ -1,5 +1,5 @@
-// const birthday = new Date(new Date().getFullYear(), 11, 25);
-const birthday = new Date(new Date().getTime() + 60 * 1000);
+const birthday = new Date(new Date().getFullYear(), 11, 25);
+// const birthday = new Date(new Date().getTime() + 60 * 1000);
 
 // Kalau tanggal sekarang lewat ulang tahun, set untuk tahun depan
 if (new Date() > birthday) {
@@ -8,8 +8,8 @@ if (new Date() > birthday) {
 
 function updateCountdown() {
   const now = new Date();
-//   const diff = birthday - now;
-  const diff = 0;
+  const diff = birthday - now;
+  // const diff = 0;
 
   // Hitung waktu tersisa
   const days = Math.floor(diff / (1000 * 60 * 60 * 24));
