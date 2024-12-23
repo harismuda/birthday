@@ -127,12 +127,14 @@
       } else if (page === 'ucapan') {
         content.innerHTML = `<h1>🎉 Happy Birthday! Gita 🎉</h1><div id="typing-container" class="typing"></div>`;
         const typingContainer = document.getElementById('typing-container');
-        const message = `Selamat ulang tahun ya Gita🎉. Semoga selalu di berikan kesehatan dan semoga apa menjadi harapan lu bisa tercapai di umur baru lu yang sekarang. Make wish dari gua gausah banyak - banyak dah, bingung juga gua ngerangkai kata-kata buat lu\n\nNgomong-ngomong selama gua kenal lu, lu itu orang nya cempreng, suka gajelas, dan ceria orangnya. \nTapi justru itu yang ngebuat lu beda dari yang lain. \n\nYaaaa... mungkin gua belom lama kenal sama lu, jadi gua belom tau banyak tentang lu. \nSekarang gua memang bukan siapa - siapa lu. Tapiiii.... semoga nextnya gua bisa jadi siapa - siapa lu nanti 🤣\n\nNih gua ingetin nih lu next nya kurang-kurangin begadang nya tar yang ada umur lu singkat 🤣\n\nGit, gua ada kado nih buat lu, udah cape gua bikin sampe kepala gua hampir pecah, awas aja lu gasuka, gua goreng lu 🤣`;
+        const message = `Happy Birthday ya Git🎉. \nSemoga selalu sehat, bahagia, dan apa pun yang jadi harapan lu bisa tercapai di usia yang baru ini. Gua gak bakal banyak-banyak bikin ucapan karena jujur, ngerangkai kata buat lu itu bikin gua mikir keras, haha.
+        \n\nNgomong-ngomong, selama gua kenal lu, lu itu cempreng, suka gajelas, tapi selalu ceria. Dan justru itu yang bikin lu beda dari yang lain—unik dan gak ngebosenin. Walaupun gua belum lama kenal lu, jadi mungkin belum tahu banyak soal lu, gua pengen bilang... sekarang mungkin gua bukan siapa-siapa buat lu. Tapi yaaa, siapa tahu nanti gua bisa jadi "seseorang" buat lu, ya kan? (Eaaaa, kebanyakan nonton drama nih gua 🤣).
+        \n\nBtw, inget ya Git, mulai sekarang kurangin begadang. Tar umur lu gak panjang gara-gara kebanyakan scroll TikTok tengah malem 🤣. Oh iya, gua ada kado spesial buat lu. Serius, ini hasil codingan yang gua bikin sampe kepala gua hampir pecah! Maaf ya, gua belum bisa kasih kado kayak orang lain yang mungkin lebih "nyata." Tapi gua harap apa yang gua buat ini bisa tetap bikin lu seneng. Jadi, awas aja kalo lu gak suka—gua sumpahin WiFi lu lemot seminggu! 🤣. Semoga lu suka ya, Git! Sekali lagi, happy birthday! 🥳`;
 
-        typeEffect(typingContainer, message, 100, () => {
+        typeEffect(typingContainer, message, 80, () => {
           content.innerHTML += `
             <br>
-            <button class="button" onclick="navigate('flower')">Ini kadonya</button>
+            <button class="button" onclick="navigate('flower')">Kado</button>
           `;
         });
       } else if (page === 'flower') {
